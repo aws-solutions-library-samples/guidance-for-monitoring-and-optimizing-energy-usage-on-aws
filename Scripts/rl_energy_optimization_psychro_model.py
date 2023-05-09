@@ -20,7 +20,7 @@ logger.setLevel(logging.INFO)
 s3 = boto3.resource('s3')
 
 #Read and standardize the data
-def get_data(filepath="../Data/data.csv"):
+def get_data(filepath="guidance-for-monitoring-and-optimizing-energy-usage-on-aws/Data/data.csv"):
 
     #Standarize the column name and format
     df = pd.read_csv(filepath) 
@@ -91,7 +91,7 @@ class RTU_enviroment(gym.Env):
             "minimum_outside_air_ratio": 0.1,
             "supply_airflow_cfm": 8000,
             "timestep": 0,
-            "filepath": "../Data/data.csv",
+            "filepath": "guidance-for-monitoring-and-optimizing-energy-usage-on-aws/Data/data.csv",
             "min_obs": -np.inf,  # Generic value range for all obs
             "max_obs": np.inf,
             "episode_len": 200,
@@ -274,7 +274,7 @@ class RTU_enviroment(gym.Env):
 
 if __name__ == "__main__":
     config_defaults = {
-        "filepath": "../Data/data.csv",
+        "filepath": "guidance-for-monitoring-and-optimizing-energy-usage-on-aws/Data/data.csv",
     }
     env = RTU_enviroment(env_config=config_defaults)
     obs = env.reset()
