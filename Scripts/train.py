@@ -5,7 +5,7 @@ from stable_baselines3 import SAC
 from stable_baselines3.common.monitor import Monitor
 
 # import the psychro model
-import psychro_model as mod
+import rl_energy_optimization_psychro_model as mod
 
 # import the boto3 library and initiate an S3 client
 client = boto3.client("s3")
@@ -41,8 +41,8 @@ def train():
     # save the trained model to a file called "SAC_RTU"
     model.save("SAC_RTU")
 
-    # upload the saved model file to an S3 bucket named "energy1298" with a key of "model1298/SAC_RTU.zip"
-    client.upload_file("SAC_RTU.zip", "energy1298", "model1298/SAC_RTU.zip")
+    # upload the saved model file to an S3 bucket name "energy-optimization-demo-xxx" with a path and key of "Model/SAC_RTU.zip"
+    client.upload_file("SAC_RTU.zip", "energy-optimization-demo-xxx", "Model/SAC_RTU.zip")
 
     print("Successfully uploaded SAC_RTU.zip to S3.")
 
