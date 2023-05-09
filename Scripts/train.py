@@ -18,7 +18,7 @@ def train():
     """
     
     # create an instance of an environment using the RTU_enviroment class from model.py with the default configuration
-    config_defaults = {"filepath": "guidance-for-monitoring-and-optimizing-energy-usage-on-aws/Data/data.csv", "episode_len": 1000}
+    config_defaults = {"filepath": "../Data/data.csv", "episode_len": 1000}
     env = mod.RTU_enviroment(env_config=config_defaults)
     
     # reset the environment
