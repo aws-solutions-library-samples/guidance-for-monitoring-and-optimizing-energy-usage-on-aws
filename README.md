@@ -28,9 +28,9 @@ There are 2 options to experiment with the solution on AWS, the first one is thr
 
 ![cloud9](Image/Cloud9.png)
 
-- **Field Name:** Monitoring & Optimizing Energy Usage on AWS
--	**Environment type:** New EC2 Instance
-- **Recommended Instance type:** m5.large (8 GiB RAM + 2 vCPU)
+- _Field Name:_ Monitoring & Optimizing Energy Usage on AWS
+-	_Environment type:_ New EC2 Instance
+- _Recommended instance type:_ m5.large (8 GiB RAM + 2 vCPU)
 
   Keep the rest default settings and create. It takes a while to load the environment.
 
