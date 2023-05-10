@@ -15,7 +15,10 @@ This RL-based solution can serve as a great starting point for optimizing energy
 
 ## Getting Started
 
-TBD
+The sample code is available in both python script format as well as Jupyter notebook.
+Make sure you create an S3 bucket named `energy-optimization-demo-xxx` where xxx is replaced by any number 3 digit number as bucket names in Amazon S3 are unique across all existing bucket names. Within the bucket create a folder as `Model`. This is where the Reinforcement Learning model would be saved.
+
+![S3bucket](Image/S3bucket.png)
 
 ## Using the sample
 
