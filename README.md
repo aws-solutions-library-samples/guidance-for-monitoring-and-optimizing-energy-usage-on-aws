@@ -1,8 +1,8 @@
 ## Guidance for Monitoring and Optimizing Energy Usage on AWS
 
-The sample code in this project demonstrate a Reinforcement Learning based solution on optimizing energy usage on AWS. 
+The sample code in this project demonstrates a Reinforcement Learning (RL) based solution to optimize energy usage on AWS. 
 
-This RL-based solution can serve as a great starting point for optimizing energy usage for equipment with temperature and humidity sensor readings. You can further optimize this solution to fit your use case, and deploy on AWS to realize cost saving.
+This RL-based solution can serve as a great starting point for optimizing energy usage for equipment with temperature and humidity sensor reading. You can further optimize this solution to fit your use case, and deploy on AWS to realize the cost saving.
 
 ### RL solution workflow
 ![rl-high-level-demo](Image/rl-demo.png)
@@ -15,12 +15,15 @@ This RL-based solution can serve as a great starting point for optimizing energy
 
 ## Getting Started
 
-The sample code is available in both python script format as well as Jupyter notebook.
-Make sure you create an S3 bucket named `energy-optimization-demo-xxx` where xxx is replaced by any number 3 digit number as bucket names in Amazon S3 are unique across all existing bucket names. Within the bucket create a folder as `Model`. This is where the Reinforcement Learning model would be saved.
+The sample code is available in both Python script format as well as Jupyter Notebook.
+
+Make sure you create an S3 bucket named `energy-optimization-demo-xxx` where xxx is replaced by any number 3 digit number as bucket names in Amazon S3 are globally unique. Within the bucket create a folder as `Model`. This is where the Reinforcement Learning model would be saved.
 
 ![S3bucket](Image/S3bucket.png)
 
-In order to use the python script in AWS, the following steps can be followed.
+There are 2 options to experiment with the solution on AWS, the first one is through AWS Cloud9.
+
+#### AWS Cloud9 Option
 1.	Create a Cloud9 environment with the following details: 
 
 ![cloud9](Image/Cloud9.png)
@@ -33,13 +36,13 @@ In order to use the python script in AWS, the following steps can be followed.
 
 ![CreatingCloud9Env](Image/CreatingCloud9Env.png)
 
-2.	Once the cloud9 environment is ready, click on open cloud9 IDE. Clone the entire git repository:   
+2.	Once the Cloud9 environment is ready, click on `Open`, and clone the GitHub repository:   
 
 `git clone https://github.com/aws-solutions-library-samples/guidance-for-monitoring-and-optimizing-energy-usage-on-aws.git`
 
 ![gitclonerepo](Image/gitclonerepo.png)
 
-3.	In order to install the python libraries follow the steps in the terminal:
+3.	Follow the steps below to set up the environment within Cloud9 via the terminal:
     1. Downloads the latest Miniconda environment for Linux x86_64.  
       `wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh`
     2. Make the downloaded file executable.  
@@ -57,9 +60,11 @@ In order to use the python script in AWS, the following steps can be followed.
 
 ![pipreqstxt](Image/pipreqstxt.png)
 
-4.	Run the python sample code.  
-   `cd Scripts`  
-   `python3 train.py`
+4.	Now that your environment is set up, execute the Python sample code.  
+   1. Change your working directory to the `Scripts` folder.
+      `cd Scripts`  
+   2. Execute the script.
+      `python3 train.py`
 
 **Notes:**
 1.	Replace the bucket name in the code, search for `energy-optimization-demo-xxx` and replace it with your own bucket name. 
@@ -74,12 +79,13 @@ Go to the cloud9 name - Monitoring & Optimizing Energy Usage on AWS. Click on `M
 
 ![RebootEC2](Image/RebootEC2.png)  
 
-In order to use the notebooks in AWS, the following steps can be followed.
+#### Amazon SageMaker Option
+
 1.	Create Amazon SageMaker Domain with Quick setup. Wait for the domain to be ready.  
 
 ![SageMaker](Image/SageMaker.png)
 
-2.	Once the domain is ready, click on it and `Launch the SageMake Studio.`
+2.	Once the domain is ready, click on it and `Launch` and the `Studio` option.
 
 ![SageMakerDomain](Image/SageMakerDomain.png)
 
