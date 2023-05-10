@@ -112,6 +112,13 @@ Go to the cloud9 name - Monitoring & Optimizing Energy Usage on AWS. Click on `M
 1.	*`ERROR: Could not install packages due to an EnvironmentError: [Errno 28] No space left on device.`*  
 Try to increase the storage space by following the above mention steps in notes section.
 
+## Acknowledgement:
+This work will not be possible with the contribution from the following authors:
+- [Charles Prosper](https://www.linkedin.com/in/charles-prosper-9a580216a/)
+- [Wei Yih Yap](https://www.linkedin.com/in/yapweiyih/)
+- [Jake Chen](https://www.linkedin.com/in/jakejchen/)
+- [Jake Tanny](https://www.linkedin.com/in/john-tanny/)
+
 ## Security
 
 See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
