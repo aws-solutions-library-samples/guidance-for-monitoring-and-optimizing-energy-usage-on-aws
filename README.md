@@ -68,7 +68,7 @@ There are 2 options to experiment with the solution on AWS, the first one is thr
 
 **Notes:**
 1.	Replace the bucket name in the code, search for `energy-optimization-demo-xxx` and replace it with your own bucket name. 
-2.	If you feel the installation takes time, try to increase the memory by following these steps, it helps to speed up the installation of stable_baseliness3 library and training of the model.  
+2.	If you feel the installation takes time, try to increase the memory by following these steps, it helps to speed up the installation of stable_baselines3 library and training of the model.  
 Go to the cloud9 name - Monitoring & Optimizing Energy Usage on AWS. Click on `Manage EC2 instance` and click on `volume ID` and modify the size of the EC2 volume. Reboot the EC2 instance.
 
 ![EC2Instance](Image/EC2instance.png)  
