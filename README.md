@@ -8,7 +8,7 @@ This RL-based solution can serve as a great starting point for optimizing energy
 ![rl-high-level-demo](Image/rl-demo.png)
 
 ### Project folder structure
-- `Data` - contains synthetic data for this RL demo
+- `Data` - contains synthetic data for this Energy Optimization RL demo
 - `Image` - Image repo 
 - `Notebooks` - contains ready to execute RL implementation in Jupyter Notebooks
 - `Scripts` - contains RL implementation in .py files ready for immediate deployment
