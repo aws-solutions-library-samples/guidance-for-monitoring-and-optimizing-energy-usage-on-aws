@@ -114,10 +114,12 @@ Try to increase the storage space by following the above mention steps in notes 
 
 ## Acknowledgement:
 This work will not be possible with the contribution from the following authors:
-- [Charles Prosper](https://www.linkedin.com/in/charles-prosper-9a580216a/)
-- [Wei Yih Yap](https://www.linkedin.com/in/yapweiyih/)
-- [Jake Chen](https://www.linkedin.com/in/jakejchen/)
-- [Jake Tanny](https://www.linkedin.com/in/john-tanny/)
+- [Ivan Cui, Senior Data Scientist @ AWS](https://www.linkedin.com/in/jiarongivancui/)
+- [Charles Prosper, Principal Applied Scientist @ AWS](https://www.linkedin.com/in/charles-prosper-9a580216a/)
+- [Wei Yih Yap, Senior Applied Scientist @ AWS](https://www.linkedin.com/in/yapweiyih/)
+- [Jake Chen, Senior Data Scientist @ AWS](https://www.linkedin.com/in/jakejchen/)
+- [Jake Tanny, Data & ML Engineer @ AWS](https://www.linkedin.com/in/john-tanny/)
+- [Jumana NAgaria, Associate Solution Architect @ AWS](https://www.linkedin.com/in/jumana-nagaria/)
 
 ## Security
 
