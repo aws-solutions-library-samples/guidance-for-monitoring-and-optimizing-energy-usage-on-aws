@@ -81,7 +81,7 @@ Go to the cloud9 name - Monitoring & Optimizing Energy Usage on AWS. Click on `M
 
 #### Amazon SageMaker Option
 
-1.	1.	Create a Cloud9 environment by deploying the [Cloudformation template](https://eu-west-1.console.aws.amazon.com/cloudformation/home?region=eu-west-1#/stacks/create) and upload the CloudformationCloud9Stack.yaml from the Cloudformation folder.
+1.	Create a Cloud9 environment by deploying the [Cloudformation template](https://eu-west-1.console.aws.amazon.com/cloudformation/home?region=eu-west-1#/stacks/create) and upload the CloudformationCloud9Stack.yaml from the Cloudformation folder.
 
 2. Specify the Stack Name, S3 bucket Name and create the stack.
 ![SageMakerNotebook](Image/SageMakerNotebook.png)
