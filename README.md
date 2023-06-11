@@ -4,6 +4,8 @@ The sample code in this project demonstrates a Reinforcement Learning (RL) based
 
 This RL-based solution can serve as a great starting point for optimizing energy usage for equipment with temperature and humidity sensor reading. You can further optimize this solution to fit your use case, and deploy on AWS to realize the cost saving.
 
+This repository includes the CloudFormation template, Jupyter Notebook, and supporting code to run RL model for Monitoring and Optimizing Energy Usage on AWS.
+
 ### RL solution workflow
 ![rl-high-level-demo](Image/rl-demo.png)
 
@@ -24,19 +26,15 @@ Make sure you create an S3 bucket named `energy-optimization-demo-xxx` where xxx
 There are 2 options to experiment with the solution on AWS, the first one is through AWS Cloud9.
 
 #### AWS Cloud9 Option
-1.	Create a Cloud9 environment with the following details: 
+1.	Create a Cloud9 environment by deploying the [Cloudformation template](https://eu-west-1.console.aws.amazon.com/cloudformation/home?region=eu-west-1#/stacks/create) and upload the Cloud9.yaml from the Cloudformation folder.
 
-![cloud9](Image/Cloud9.png)
+![CloudformationCloud9](Image/CloudformationCloud9.png)
 
-- _Field Name:_ Monitoring & Optimizing Energy Usage on AWS
--	_Environment type:_ New EC2 Instance
-- _Recommended instance type:_ m5.large (8 GiB RAM + 2 vCPU)
+2. Specify the Stack name and create the stack.
 
-  Keep the rest default settings and create. It takes a while to load the environment.
+![CloudformationCloud9Stack](Image/CloudformationCloud9Stack.png)
 
-![CreatingCloud9Env](Image/CreatingCloud9Env.png)
-
-2.	Once the Cloud9 environment is ready, click on `Open`, and clone the GitHub repository:   
+2.	Once the Stack is created succesfully, find the Cloud9 IDE URL under the output tab of CloudFormation, and clone the GitHub repository: 
 
 `git clone https://github.com/aws-solutions-library-samples/guidance-for-monitoring-and-optimizing-energy-usage-on-aws.git`
 
@@ -55,7 +53,9 @@ There are 2 options to experiment with the solution on AWS, the first one is thr
       `conda activate py39`
     6. Navigate to the Guidance Directory.  
       `cd guidance-for-monitoring-and-optimizing-energy-usage-on-aws`
-    7. Installs the required Python packages listed in the requirements.txt file.  
+    7. Install the setuptools version 65.5.0.   
+      `pip install setuptools==65.5.0`
+    8. Installs the required Python packages listed in the requirements.txt file.  
       `pip install -r requirements.txt`
 
 ![pipreqstxt](Image/pipreqstxt.png)
@@ -81,32 +81,20 @@ Go to the cloud9 name - Monitoring & Optimizing Energy Usage on AWS. Click on `M
 
 #### Amazon SageMaker Option
 
-1.	Create Amazon SageMaker Domain with Quick setup. Wait for the domain to be ready.  
+1.	1.	Create a Cloud9 environment by deploying the [Cloudformation template](https://eu-west-1.console.aws.amazon.com/cloudformation/home?region=eu-west-1#/stacks/create) and upload the CloudformationCloud9Stack.yaml from the Cloudformation folder.
 
-![SageMaker](Image/SageMaker.png)
+2. Specify the Stack Name, S3 bucket Name and create the stack.
+![SageMakerNotebook](Image/SageMakerNotebook.png)
 
-2.	Once the domain is ready, click on it and `Launch` and the `Studio` option.
-
-![SageMakerDomain](Image/SageMakerDomain.png)
-
-3.	Select `Git` on the menu bar and click on `Clone Git Repository`. Paste the Git repository URL: `https://github.com/aws-solutions-library-samples/guidance-for-monitoring-and-optimizing-energy-usage-on-aws.git` and clone.
+3.	Once the Stack is created succesfully, find the Cloud9 IDE URL under the output tab of CloudFormation. Select `Git` on the menu bar and click on `Clone a Repository`. Paste the Git repository URL: `https://github.com/aws-solutions-library-samples/guidance-for-monitoring-and-optimizing-energy-usage-on-aws.git` and clone.
 
 ![SageMakerGitClone](Image/SageMakerGitClone.png)
 
-4.	Open the Jupyter Notebook and set up the notebook environment as follows:
--	**Instance type:** ml.m5.large
-
-![SageMakerNotebookEnv](Image/SageMakerNotebookEnv.png)
-
 ## Cleanup
 -	Delete the S3 bucket resources 
--	Delete the Cloud9 environment if using python Script.
+-	Delete the Cloudformation Stacks.
 
-![DeleteCloud9](Image/DeleteCloud9.png)
-
--	Terminate the running instances from SageMaker Studio if using Jupyter Notebooks.
-
-![TerminateSageMakerInstance](Image/TerminateSageMakerInstance.png)
+![DeleteCloudformationStack](Image/DeleteCloudformationStack.png)
 
 ## Troubleshoot
 1.	*`ERROR: Could not install packages due to an EnvironmentError: [Errno 28] No space left on device.`*  

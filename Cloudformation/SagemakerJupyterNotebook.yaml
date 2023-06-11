@@ -1,0 +1,72 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description:  Guidance for Monitoring and Optimizing Energy Usage on AWS ()
+Parameters:
+  S3BucketName:
+    Description: Enter your S3 Bucket Name
+    Type: String
+    
+Resources:
+  ExecutionRole:
+    Type: "AWS::IAM::Role"
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: "Allow"
+            Principal:
+              Service: "sagemaker.amazonaws.com"
+            Action: "sts:AssumeRole"
+      Policies:
+        - PolicyName: SageMakerExecutionRolePolicy
+          PolicyDocument:
+            Statement:
+              - Effect : "Allow"
+                Action: 
+                  - "s3:PutObject"
+                  - "s3:GetObject"
+                Resource: !Sub "arn:aws:s3:::${S3BucketName}/*"
+  SageMakerKMSKey:
+    Type: "AWS::KMS::Key"
+    Properties:
+      Description: KMS key for SageMaker
+      KeyPolicy:
+        Version: "2012-10-17"
+        Statement:
+          - Sid: Allow SageMaker Access
+            Effect: "Allow"
+            Principal:
+              AWS: !Sub "arn:aws:iam::${AWS::AccountId}:root"     
+            Action:
+              - "kms:*"
+            Resource: "*"
+      EnableKeyRotation: true
+ 
+  SageMakerNotebookInstance:
+    Type: "AWS::SageMaker::NotebookInstance"
+    Properties:
+      NotebookInstanceName: MonitoringAndEnergyOptimizingOnAwsNotebook
+      InstanceType: "ml.m5.xlarge"
+      RoleArn: !GetAtt ExecutionRole.Arn
+      KmsKeyId: !GetAtt SageMakerKMSKey.KeyId
+      DirectInternetAcess: Disabled
+
+Outputs:
+  SageMakerNotebookInstance:
+    Description: ARN of the SageMaker NotebookInstance
+    Value: !Ref SageMakerNotebookInstance
+  SageMakerNotebookURL:
+    Value:
+      Fn::Join:
+      - ''
+      - - https://
+        - Ref: AWS::Region
+        - ".console.aws.amazon.com/sagemaker/home?region"
+        - Ref: AWS::Region
+        - "#/notebook-instances/openNotebook/"
+        - Ref: AWS::StackName
+        - "?view=lab"
+
+
+
+    
+  

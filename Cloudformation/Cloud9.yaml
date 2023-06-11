@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Guidance for Monitoring and Optimizing Energy Usage on AWS ()
+
+Resources:
+  Cloud9Environment:
+    Type: AWS::Cloud9::EnvironmentEC2
+    Properties:
+      Name: Monitoring & Optimizing Energy Usage on AWS
+      InstanceType: "m5.large"
+      AutomaticStopTimeMinutes: 30
+Outputs:
+  Cloud9EnvironmentId:
+    Description: The ID of the Cloud9 environment
+    Value: !Ref Cloud9Environment
+  Cloud9IDE:
+    Value:
+      Fn::Join:
+      - ''
+      - - https://
+        - Ref: AWS::Region
+        - ".console.aws.amazon.com/cloud9/ide/"
+        - Ref: Cloud9Environment
+        - "?region="
+        - Ref: AWS::Region
+
+
