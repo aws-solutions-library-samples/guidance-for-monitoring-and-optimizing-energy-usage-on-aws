@@ -48,7 +48,7 @@ Resources:
       InstanceType: "ml.m5.xlarge"
       RoleArn: !GetAtt ExecutionRole.Arn
       KmsKeyId: !GetAtt SageMakerKMSKey.KeyId
-      DirectInternetAcess: Disabled
+      DirectInternetAccess: Disabled
 
 Outputs:
   SageMakerNotebookInstance:
