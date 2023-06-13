@@ -3,10 +3,11 @@ Description: Guidance for Monitoring and Optimizing Energy Usage on AWS ()
 
 Resources:
   Cloud9Environment:
-    Type: AWS::Cloud9::EnvironmentEC2
+    Type: "AWS::Cloud9::EnvironmentEC2"
     Properties:
       Name: Monitoring & Optimizing Energy Usage on AWS
       InstanceType: "m5.large"
+      ConnectionType: "CONNECT_SSM"
       AutomaticStopTimeMinutes: 30
 Outputs:
   Cloud9EnvironmentId:
