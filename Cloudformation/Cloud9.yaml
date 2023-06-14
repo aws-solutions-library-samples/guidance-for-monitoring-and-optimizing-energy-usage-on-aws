@@ -9,6 +9,9 @@ Resources:
       InstanceType: "m5.large"
       ConnectionType: "CONNECT_SSM"
       AutomaticStopTimeMinutes: 30
+      Tags:
+        - Key: SolutionId
+          Value: SO9200
 Outputs:
   Cloud9EnvironmentId:
     Description: The ID of the Cloud9 environment

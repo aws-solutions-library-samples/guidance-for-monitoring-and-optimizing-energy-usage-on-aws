@@ -49,6 +49,9 @@ Resources:
       RoleArn: !GetAtt ExecutionRole.Arn
       KmsKeyId: !GetAtt SageMakerKMSKey.KeyId
       DirectInternetAccess: Enabled
+      Tags: 
+        - Key: SolutionId
+          Value: SO9200
 
 Outputs:
   SageMakerNotebookInstance:
