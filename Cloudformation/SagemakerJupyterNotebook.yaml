@@ -62,9 +62,8 @@ Outputs:
         - Ref: AWS::Region
         - ".console.aws.amazon.com/sagemaker/home?region"
         - Ref: AWS::Region
-        - "#/notebook-instances/openNotebook/"
-        - Ref: AWS::StackName
-        - "?view=lab"
+        - "#/notebook-instances/openNotebook/MonitoringAndEnergyOptimizingOnAwsNotebook?view=lab"
+       
 
 
 
