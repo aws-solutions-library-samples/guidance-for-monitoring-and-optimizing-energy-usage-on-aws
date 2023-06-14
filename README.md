@@ -4,7 +4,7 @@ The sample code in this project demonstrates a Reinforcement Learning (RL) based
 
 This RL-based solution can serve as a great starting point for optimizing energy usage for equipment with temperature and humidity sensor reading. You can further optimize this solution to fit your use case, and deploy on AWS to realize the cost saving.
 
-This repository includes the CloudFormation template, Jupyter Notebook, and supporting code to run RL model for Monitoring and Optimizing Energy Usage on AWS.
+This repository includes the Jupyter Notebook, and supporting code to run RL model for Monitoring and Optimizing Energy Usage on AWS, which can be readily deploy in step 5 of the ![Reference Architecture](https://aws.amazon.com/solutions/guidance/monitoring-and-optimizing-energy-usage-on-aws/). 
 
 ### RL solution workflow
 ![rl-high-level-demo](Image/rl-demo.png)
@@ -89,6 +89,14 @@ Go to the cloud9 name - Monitoring & Optimizing Energy Usage on AWS. Click on `M
 3.	Once the Stack is created succesfully, find the Cloud9 IDE URL under the output tab of CloudFormation. Select `Git` on the menu bar and click on `Clone a Repository`. Paste the Git repository URL: `https://github.com/aws-solutions-library-samples/guidance-for-monitoring-and-optimizing-energy-usage-on-aws.git` and clone.
 
 ![SageMakerGitClone](Image/SageMakerGitClone.png)
+
+## Next Steps
+
+This RL-based Energy Optimizatio model demonstrates value through optimizing the Economizer usage of the HVAC units based on `ZoneTemperature`, `ZoneHumidity`, `OutsideTemperature`, and `OutsideHumidity`. When replaced with actual telemetry data of these 4 sensors, the RL agent has achieved up to 5% reduction in power needed to sustain the same comfort level comparing to ASHRAE Standard 90.1-2013 setting, as shown below. 
+
+![RL-Result](Image/rl-result.png)
+
+We encourage you to take this RL framework, and tailor it to your use case. You can also embed the model into the reference architecture CDK stack that will be releasing in the near future.
 
 ## Cleanup
 -	Delete the S3 bucket resources 
