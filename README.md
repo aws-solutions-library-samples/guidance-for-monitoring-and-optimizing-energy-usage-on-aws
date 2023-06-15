@@ -92,7 +92,7 @@ Go to the cloud9 name - Monitoring & Optimizing Energy Usage on AWS. Click on `M
 
 ## Next Steps
 
-This RL-based Energy Optimizatio model demonstrates value through optimizing the Economizer usage of the HVAC units based on `ZoneTemperature`, `ZoneHumidity`, `OutsideTemperature`, and `OutsideHumidity`. When replaced with actual telemetry data of these 4 sensors, the RL agent has achieved up to 5% reduction in power needed to sustain the same comfort level comparing to ASHRAE Standard 90.1-2013 setting, as shown below. 
+This RL-based Energy Optimization model demonstrates value through optimizing the Economizer usage of the HVAC units based on `ZoneTemperature`, `ZoneHumidity`, `OutsideTemperature`, and `OutsideHumidity`. When replaced with actual telemetry data of these 4 sensors, the RL agent has achieved up to 5% reduction in power needed to sustain the same comfort level comparing to ASHRAE Standard 90.1-2013 setting, as shown below. 
 
 ![RL-Result](Image/rl-result.png)
 
