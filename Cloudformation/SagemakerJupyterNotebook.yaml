@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: "2010-09-09"
-Description:  Guidance for Monitoring and Optimizing Energy Usage on AWS ()
+Description:  Guidance for Monitoring and Optimizing Energy Usage on AWS (SO9200)
 Parameters:
   S3BucketName:
     Description: Enter your S3 Bucket Name
