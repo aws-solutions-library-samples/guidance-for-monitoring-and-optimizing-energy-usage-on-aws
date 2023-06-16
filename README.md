@@ -4,7 +4,7 @@ The sample code in this project demonstrates a Reinforcement Learning (RL) based
 
 This RL-based solution can serve as a great starting point for optimizing energy usage for equipment with temperature and humidity sensor reading. You can further optimize this solution to fit your use case, and deploy on AWS to realize the cost saving.
 
-This repository includes the Jupyter Notebook, and supporting code to run RL model for Monitoring and Optimizing Energy Usage on AWS, which can be readily deploy in step 5 of the ![Reference Architecture](Image/reference-architecture). 
+This repository includes the Jupyter Notebook, and supporting code to run RL model for Monitoring and Optimizing Energy Usage on AWS, which can be readily deploy in step 5 of the ![Reference Architecture](Image/reference-architecture.png). 
 
 ### RL solution workflow
 ![rl-high-level-demo](Image/rl-demo.png)
