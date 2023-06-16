@@ -4,7 +4,7 @@ The sample code in this project demonstrates a Reinforcement Learning (RL) based
 
 This RL-based solution can serve as a great starting point for optimizing energy usage for equipment with temperature and humidity sensor reading. You can further optimize this solution to fit your use case, and deploy on AWS to realize the cost saving.
 
-This repository includes the Jupyter Notebook, and supporting code to run RL model for Monitoring and Optimizing Energy Usage on AWS, which can be readily deploy in step 5 of the ![Reference Architecture](https://aws.amazon.com/solutions/guidance/monitoring-and-optimizing-energy-usage-on-aws/). 
+This repository includes the Jupyter Notebook, and supporting code to run RL model for Monitoring and Optimizing Energy Usage on AWS, which can be readily deploy in step 5 of the ![Reference Architecture](Image/reference-architecture). 
 
 ### RL solution workflow
 ![rl-high-level-demo](Image/rl-demo.png)
@@ -81,12 +81,12 @@ Go to the cloud9 name - Monitoring & Optimizing Energy Usage on AWS. Click on `M
 
 #### Amazon SageMaker Option
 
-1.	Create a Cloud9 environment by deploying the [Cloudformation template](https://eu-west-1.console.aws.amazon.com/cloudformation/home?region=eu-west-1#/stacks/create) and upload the CloudformationCloud9Stack.yaml from the Cloudformation folder.
+1.	Create a Amazon SageMaker Notebook by deploying the [Cloudformation template](https://eu-west-1.console.aws.amazon.com/cloudformation/home?region=eu-west-1#/stacks/create) and upload the SageMakerJupyterNotebook.yaml from the Cloudformation folder.
 
 2. Specify the Stack Name, S3 bucket Name and create the stack.
 ![SageMakerNotebook](Image/SageMakerNotebook.png)
 
-3.	Once the Stack is created succesfully, find the Cloud9 IDE URL under the output tab of CloudFormation. Select `Git` on the menu bar and click on `Clone a Repository`. Paste the Git repository URL: `https://github.com/aws-solutions-library-samples/guidance-for-monitoring-and-optimizing-energy-usage-on-aws.git` and clone.
+3.	Once the Stack is created succesfully, find the `Git` option on the menu bar and paste the Git repository URL: `https://github.com/aws-solutions-library-samples/guidance-for-monitoring-and-optimizing-energy-usage-on-aws.git`, then click `Clone`.
 
 ![SageMakerGitClone](Image/SageMakerGitClone.png)
 
